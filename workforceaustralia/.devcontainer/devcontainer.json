@@ -1,0 +1,17 @@
+{
+  "name": "Django Project",
+  "context": "..",
+  "dockerFile": "./Dockerfile",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.pythonPath": "python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}

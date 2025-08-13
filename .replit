@@ -1,0 +1,29 @@
+run = "python setup_replit.py"
+entrypoint = "main.py"
+
+[nix]
+channel = "stable-22_11"
+
+[env]
+PYTHONPATH = "${REPL_HOME}"
+DB_HOST = "localhost"
+DB_PORT = "5432"
+DB_NAME = "austra_jobs"
+DB_USER = "postgres"
+DB_PASSWORD = "password"
+USE_REMOTE_SELENIUM = "false"
+
+[packager]
+language = "python3"
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[languages]
+[languages.python3]
+pattern = "**/*.py"
+syntax = "python"
+
+[languages.python3.languageServer]
+start = [ "pylsp" ] 
